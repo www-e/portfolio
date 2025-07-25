@@ -20,19 +20,19 @@ type DayNightSwitchProps = {
 type AnimationMode = keyof typeof backgroundVariants;
 
 const backgroundVariants: Variants = {
-  day: {
-    background: "linear-gradient(to bottom, #87CEEB, #E0F7FA)",
-    transition: { duration: 0.7, ease: "easeInOut" },
-  },
-  sunset: {
-    background: "linear-gradient(to bottom, #FF7E5F, #FEB47B, #D76D77)",
-    transition: { duration: 0.7, ease: "easeInOut" },
-  },
-  night: {
-    background: "linear-gradient(to bottom, #0F2027, #203A43, #2C5364)",
-    transition: { duration: 0.7, ease: "easeInOut" },
-  },
-};
+    day: {
+      background: "linear-gradient(to bottom, var(--day-sky-start), var(--day-sky-end))",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+    sunset: {
+      background: "linear-gradient(to bottom, #FF7E5F, #FEB47B, #D76D77)",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+    night: {
+      background: "linear-gradient(to bottom, var(--night-sky-start), var(--night-sky-end))",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
 
 const sunVariants: Variants = {
   visible: { 
